@@ -1,0 +1,23 @@
+// sm, md, lg
+@mixin breakpoint($size) {
+	@if ($size == "sm") {
+		@media all and (min-width: 700px) {
+			@content;
+		}
+	}
+	@else if ($size == "md") {
+		@media all and (min-width: 1000px) {
+			@content;
+		}
+	}
+	@else if ($size == "lg") {
+		@media all and (min-width: 1200px) {
+			@content;
+		}
+	}
+	@else if ($size == "xl") {
+		@media all and (min-width: 1400px) {
+			@content;
+		}
+	}
+}
